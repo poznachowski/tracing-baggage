@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: baggage-test
+  cloud:
+    stream:
+      bindings:
+        onBaggageEvent-in-0:
+          destination: baggage-assigned-topic
+          group: log-baggage-assigned-processor
+        baggage-assigned-out-0:
+          destination: baggage-assigned-topic
+      output-bindings: baggage-assigned
+  sleuth:
+    baggage:
+      local-fields:
+        - "test_baggage"
+      remote-fields:
+        - "test_baggage"
+
+
+logging:
+  level:
+    org.springframework.cloud.sleuth.instrument.messaging: DEBUG

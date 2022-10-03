@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    gcp:
+      projectId: ${embedded.google.pubsub.projectId}
+      pubsub:
+        emulatorHost: ${embedded.google.pubsub.host}:${embedded.google.pubsub.port}
+        projectId: ${embedded.google.pubsub.projectId}

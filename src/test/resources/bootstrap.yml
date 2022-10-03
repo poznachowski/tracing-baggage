@@ -1,0 +1,6 @@
+embedded:
+  google:
+    pubsub:
+      topics-and-subscriptions:
+        - topic: baggage-assigned-topic
+          subscription: baggage-assigned-topic.log-baggage-assigned-processor
